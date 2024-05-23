@@ -58,14 +58,17 @@ git commit -m "v2"
 git log  ========= showes both the commits id  what changes had done 
 copy commit id to go to that vertion ====  git reset --hard 4fc27bccc89e081fc085cc63e02f34d012376aa4 (commit id)
 and cat file  ====== cat git showes that vertion data present
-========to share the code or distributed system  github, self hosted git ,bitbuket
-create a github account from google type githublogin======github======
-create respositoty and can add files from git hub only are we can push from git to github to copy use fork
 # Check the changes made in each commit
 git log -p
 #The following prints the commit message alone with commit ID
 $ git log --oneline
 4fc27bc (HEAD -> master) this is my 1st v1
+========to share the code or distributed system  github, self hosted git ,bitbuket
+create a github account from google type githublogin======github======
+create respositoty and can add files from git hub only are we can push from git to github to copy use fork
+
+
+
 
 
 
