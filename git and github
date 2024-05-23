@@ -63,10 +63,30 @@ git log -p
 #The following prints the commit message alone with commit ID
 $ git log --oneline
 4fc27bc (HEAD -> master) this is my 1st v1
+=================Branching startergie==============
+branch is separation 
+master branch ===== up to date it should be 
+feture branch ====for new feture we create feture branch and work in it insted off working in master branch 
+relese branch ===== build and dilviery to relse 
+hot/bug fix branches ===== 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ========to share the code or distributed system  github, self hosted git ,bitbuket
 create a github account from google type githublogin======github======
 create respositoty and can add files from git hub only are we can push from git to github to copy use fork
-
+ 
 
 
 
