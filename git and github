@@ -1,2 +1,75 @@
 Github and git
-vcs =version control system
+vcs =version control system = 2 major problem 1) sharing of code 2)versioning
+
+vertion contorl 
+cvs,svn= centralized
+git=disributed ,fork
+
+git = open source ,downlod from ec2 instance 
+github=usability, isses ,commenting,reviewing ,project tracking 
+
+types ,bitbuket, gitlab
+open source tool - it means it is free 
+source code versining system 
+
+source code -set of lines or programing language 
+
+local repository  - in our michen =======git
+Remote repository -centralalized SCM - distributed vertion system ===github==== owned my microsoft git hub is cloudhosting platform 
+# List global configuration for the current user in windows 
+git config --global --list
+# Set the name and email to the git global configuration
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+# To Verify the previous commands
+git config --global --list
+git --version
+
+=======git======
+to install git search in crome download git for windows ,linux ,mac 
+in linux = ubantu =apt-get install git, fedora = yum install git,
+
+we can do in two way to prcatice in aws vm= install git = and type git it showes the all commands git supports
+download in windows and open one emty folder and open with git bash and type git it will show the all commands which supports
+======commands===== 
+git init   =intialize emty repository 
+ls -la     =hiden file to check the emty git created r not 
+.
+..
+.git       =it is hiden file it trakes by this .git  to all repositories 
+ls .git    =to see what and all present inside .git 
+HEAD  config  description  hooks/  info/  objects/  refs/
+
+everthing it track as =objects 
+hooks= prevent unintetinally creating api tooken
+config = confic cetificates ,etc
+
+git status 
+gives status of intraked files 
+
+git add . =trakes all the files 
+git add (repo name) =trakes perticular file 
+git diff   === gives difference b/w file changes =if file alredy tracked and others made changes and and not tracked files than showes difference
+
+git commit -m "this is my 1st v1"  == it commites which are files present in .git folder if we not added files to .git folder tha it showes modified filename 
+git status 
+git add (file name)
+git commit -m "v2"
+git log  ========= showes both the commits id  what changes had done 
+copy commit id to go to that vertion ====  git reset --hard 4fc27bccc89e081fc085cc63e02f34d012376aa4 (commit id)
+and cat file  ====== cat git showes that vertion data present
+========to share the code or distributed system  github, self hosted git ,bitbuket
+create a github account from google type githublogin======github======
+create respositoty and can add files from git hub only are we can push from git to github to copy use fork
+# Check the changes made in each commit
+git log -p
+#The following prints the commit message alone with commit ID
+$ git log --oneline
+4fc27bc (HEAD -> master) this is my 1st v1
+
+
+
+
+
+
+
