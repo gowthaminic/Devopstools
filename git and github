@@ -88,6 +88,16 @@ hot/bug fix branches =====
 ========to share the code or distributed system  github, self hosted git ,bitbuket
 create a github account from google type githublogin======github======
 create respositoty and can add files from git hub only are we can push from git to github to copy use fork
+git push ===== to push changes from git to github
+in code use url and in git ===== git clone "url" =======it will take all repositeries
+https ====use password   ssh ======public key 
+
+git remotr -v ===== need to check configerd git hub r not
+# Show available remote upstreams along with their URLs
+git remote -v
+git remote add "location"
+# Adds a remote named origin for the repository at the specified url   
+git remote add origin  https://github.com/mycloudazure/gitpractice
 
 
 
