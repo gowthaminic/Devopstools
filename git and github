@@ -98,6 +98,10 @@ git remote -v
 git remote add "location"
 # Adds a remote named origin for the repository at the specified url   
 git remote add origin  https://github.com/mycloudazure/gitpractice
+#open token to connect to remote repositerty   and copy the tocken and use for 30 dys 
+profile settings=devleopersettings=personal access token=token clasic=generare new token fill all and generate 
+
+
 
 
 
