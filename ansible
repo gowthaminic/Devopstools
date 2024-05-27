@@ -1,0 +1,87 @@
+Ansible  ( puppet chef salt )
+configuration management tool
+redhat ansible 
+========
+puppet = pull mechansium
+master\slave model
+============
+ansible = push mechanisum 
+agent less modle
+iventerory file ip addres or DNS and posswerd less athentication 
+dynamic invetory autodetect
+windows and linux support is ezay
+simple yaml langvge
+python based tool
+
+DISADVANTAGES
+windows server still issue 
+debugging
+performance issue improve
+
+ansible galaxy to share own modules to others
+
+ansible uses python
+suports linux with (ssh)protocol
+supports windows with (winrm)protocal
+
+it supports all cloud providers public ip =ssh enabled =does ssh allowed to ansible host michen
+
+=====install ansible =====  
+sudo apt update for ubantu 
+sudo apt install ansible /======and in documentation we can try
+ansible --version ===== for vertion
+
+in windows choclate install windows
+using ansible server configer target or clinet server or worker node 
+===== private ip from worker node
+====== go to ansible vm 
+=======ssh private ip 
+multiple ways to configure password less authentication 
+ssh-copy-id private ip =====( doesent have enough permissions to do it)
+================
+ssh-keygen  == generate key for us 
+publik private key 
+(/home/ubuntu/.ssh/id_rsa)
+ls
+from ssh keygen two keys generated     id_rsa private key id_rsa.pub public 
+private key we should not share to anyone 
+to talk ansible server to clint server take public key 
+Cat id_rsa.pub  before that go do directory 
+copy public key 
+
+login to other client michen and login
+ssh keygen 
+create set of filess ls ~/.ssh/
+
+vim ~/.ssh/authorized_keys
+paste key 
+
+go to ansible server and ssh private ip we can conmnect
+
+plybooks, ansible files
+ls-ltr
+vim script.sh
+
+(shebank follwed by /bin/bash) #!/bin/bash
+
+task ==create files in target server
+run command 
+run adhoc commands
+
+inventery files is the file which stores the ip address
+/etc/ansible/host 
+create file invetery file
+
+ansible -i inventory privete ip or all
+ansible -i inventory all -m "shell" -a "touch devopsclass" run in tower 
+
+two run 1 or 2 command run  adhoc commands
+du -sh to see size of each file 
+
+
+google ansible modules
+-m for modules -a for argument
+nproc = how many target servers
+df = disk free
+
+shell to copy 
