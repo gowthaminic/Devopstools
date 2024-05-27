@@ -1,8 +1,9 @@
 Github and git    vcs/scm version control system/source code mangement 
-
-
-
-
+git work flow
+working area ==== new files ,modified files in red colour 
+index/staging area ==== git add. git add* git add file name 
+local repository ===== git commit -m "meassege"
+remote ===== git push orgin(url)  master(defalt branch)
 vcs =version control system = 2 major problem 1) sharing of code 2)versioning
 
 vertion contorl 
@@ -67,6 +68,23 @@ git log -p
 #The following prints the commit message alone with commit ID
 $ git log --oneline
 4fc27bc (HEAD -> master) this is my 1st v1
+git pull origin master 
+git push origin master 
+git fetch origin master  ==========foolowerd by merge command 
+git merge only for fetch 
+git reset commitid  ===== it will take you to that commit
+
+back wording files 
+if file in working are  back from that 
+git checkout filename
+
+if it is in staging back to working ares 
+git reset (file name)
+
+how to undo changes in local repo
+git log 
+git reset commit id 
+commit id minimum 5 or 9 
 
 
 =================Branching startergie==============
@@ -93,6 +111,7 @@ hot/bug fix branches =====
 create a github account from google type githublogin======github======
 create respositoty and can add files from git hub only are we can push from git to github to copy use fork
 git push ===== to push changes from git to github
+git uses 2 protocals https and SSH 
 in code use url and in git ===== git clone "url" =======it will take all repositeries
 https ====use password   ssh ======public key 
 
@@ -104,13 +123,18 @@ git remote add "location"
 git remote add origin  https://github.com/mycloudazure/gitpractice
 #open token to connect to remote repositerty   and copy the tocken and use for 30 dys 
 profile settings=devleopersettings=personal access token=token clasic=generare new token fill all and generate 
+git token 
+https://levelup.gitconnected.com/fix-password-authentication-github-3395e579ce74
 
 
 
 
 
 
-git add. /git add* /git add file name
+
+
+
+
 
 
 
