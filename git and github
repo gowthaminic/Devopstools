@@ -78,13 +78,15 @@ back wording files
 if file in working are  back from that 
 git checkout filename
 
-if it is in staging back to working ares 
+if it is in stagging back to working ares 
 git reset (file name)
 
 how to undo changes in local repo
 git log 
 git reset commit id 
 commit id minimum 5 or 9 
+
+git clean ==== remove untracked files
 
 
 =================Branching startergie==============
@@ -94,11 +96,67 @@ feture branch ====for new feture we create feture branch and work in it insted o
 relese branch ===== build and dilviery to relse 
 hot/bug fix branches ===== 
 
+git branch  ==== to see how many branches
+git branch dev2 ====== to create new branch
+git push origin dev2  ====== to push repo in to github
+git push origin -d dev3 =====to delete branch
+git checkout branch name ===== to go to branch 
 
+=====merging strayegies in locally=====
+fast-forward
+twoway or ort /recurisive 
+git rebases
 
+========fast-forward =======
+file =git add.====git commit -m ====git checkout (dev2) === git merge (feture 2)====git checkout master to ===git merge dev2
+if we need to merge to dev means go to dev and merge feture 
+if we need to merge to master means chgeckout to master and merge dev so it will merge to master from dev
 
+=======twoway or ort /recurisive ====
+not used 
+git rebase (branch name) (dnagerous )
 
+=====git cherry-pick=======
+it picks a commit from one branch and apply to another branch with out doing merge commandgit 
+==== cherry-pick commitid 
 
+=====tags ========
+tags used to relese application
+in locally to see   ===== git tag =====
+
+2 types volatile == temporory  and non vlatile tag ==permanent
+from master branch creat tag 
+volatile
+git tag 0.1 =======to create new tag
+git push orgin  0.1 ======to push to remove 
+git tag -d v1 ====== to delete
+git push -d v1  =====to delete in remote
+
+non valatile tag 
+creating on perticular commit 
+git log 
+after commit 
+git tag v1 commit id ===== v1 =tag name 
+git push orgin v1 ==== to push to remote 
+
+=====
+git stash === temporary save 
+unstash
+developer ====file =====woking are==index area====brfore going to commit got p1 task 
+to save temporty save
+== git stash save =======temp save 
+=== git stash list ===== list 
+unstash 0r git stash popstash id stash 
+
+========merge conflicts =======
+locally
+2 dev working in same line unable to merge
+git merge tool  === to open file
+<<<    >>>>> delete save
+
+remote 
+find this option ==== mergeconficts  === open file 
+<<<<<<    >>>>>> remove brackes 
 
 
 
@@ -125,6 +183,8 @@ git remote add origin  https://github.com/mycloudazure/gitpractice
 profile settings=devleopersettings=personal access token=token clasic=generare new token fill all and generate 
 git token 
 https://levelup.gitconnected.com/fix-password-authentication-github-3395e579ce74
+
+pull request  source  and destination 
 
 
 
