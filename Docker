@@ -1,1 +1,52 @@
+docker ==contanerization tool
 
+virtulization :
+VMware : multiple operating system mange ==== windows ,ubuntu, linux
+hyperviser ===vmware====vitulization.
+heavy weight ===hardware (cpu ,memory,hard disk utilization)
+not eazy to move
+contanerization ====
+docker install -->>> dokerdaemon --->>> containers
+container is nothint but operating system.-
+container is nothing but server.
+leight weight --->>>no need to take hardware utilization 
+easy to move.
+less utilization of hardware resources..
+
+Docker : developers develope the code and that code can be shipped them into container..application -->>> end user.
+one ec2 instance ---->> docker install -->>> containers --->>> n no.of conatinaers it dependent on the system hardware..n no .of apps -->> deploy
+
+key componets 
+docker image ===docker cli or docker file  =====back up docker hub or registory
+
+docker architecutre 
+client server architecture  ===client and server should be in same vm
+clent =api=docker demon= continers ====both called docker engine
+
+docker workflow  
+dockerfile===docker image ====docker hub===pull image for dev=dockerimage =docker container 
+docker installation steps:
+1. we need to take one ec2 instance..
+2. install docker 
+yum install -y docker
+service docker start
+ifconfig -a
+docker 0 --->>> bridge network. assign ip adress to continer
+c1 , c2 , c3 .....IP allocate. ( internal) --->> throgh loop back address
+ifconfig -a  ====   to see network mormally etho ,lopback ,docker0 =bridge network ==assign ip adress to all continers
+docker info  ===to see all info 
+defalt docker home directory ===/var/lib/docker 
+docker image or ls or ls -a    =====images
+docker ps or ps -a     ====continers
+docker pull nginx  =====
+docker inspect image id   ===== image complete info
+docker run -itd --name gowthami -p cid:apn   40:80 image id
+docker login
+docker  tag  we should tag before pushing to docker hub and tag must be created repository:tag  
+docker tag nginx:latest path (docker hub repo:jenkins (anynamea)
+docker push path
+docker inspect continer id ===== complete info of docker continer 
+docker  exec -it continer id or name   /bin/bash ====to login in to continer
+exit =====to come out
+docker stop continer name 
+docker rm continer name 
