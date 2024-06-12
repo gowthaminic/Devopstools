@@ -74,9 +74,26 @@ Docker network create --driver bridge  javahome(anyname0 to create own network
 docker inspect javahome 
 docker run -itd --name a1 -p 60:80 --network javahome alpine
 dns resolution will happen in our own network we can ping by namew as well
+ 
+docker file : it is text file it contains instructions ===dockerimage ==docker continer
+keywords  from ,copy,environment ,port 
+Dockerfile =====name should be uniqe D cpase
 
+ touch Docker file
+vi edit 
+from ubuntu:14.04
+run apt-get update && apt-get install -y apache2 &&
+expose 80
+CMD ["apache2ctl","-D", "foreground"]
+we should run were we have file 
+pwd 
+ls 
+docker build -t ubuntu:tagname .   (. ) === corrent location  to build docker image 
+docker image ls
+create continer    docker run -itd s3 -p 60:80 image id 
 
-
+we can call it from jenkins 
+copy command war file from maven 
 
 
 
