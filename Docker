@@ -54,3 +54,32 @@ docker rm -f  continer name
 docker rmi -f image name
 docker run -itd --name x1 -p  666:9000 sonarqube image and continer
 
+docker volumes 
+docker volume ls =======to see volumes 
+docker volume create gowthami 
+docker run -itd --name t2 -v gowthami:/myapp(mountpoint) alpine (image)
+
+docker networks 
+docker network ls 
+bridge defalut network
+host  local 
+none  no network 
+overlative network for cluters 
+we can create our own network
+
+docker run -itd --name a1 -p 60:80 alpine 
+docker inspect bridge 
+can ping with any continer
+Docker network create --driver bridge  javahome(anyname0 to create own network 
+docker inspect javahome 
+docker run -itd --name a1 -p 60:80 --network javahome alpine
+dns resolution will happen in our own network we can ping by namew as well
+
+
+
+
+
+
+
+
+
