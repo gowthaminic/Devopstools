@@ -50,3 +50,7 @@ docker  exec -it continer id or name   /bin/bash ====to login in to continer
 exit =====to come out
 docker stop continer name 
 docker rm continer name 
+docker rm -f  continer name 
+docker rmi -f image name
+docker run -itd --name x1 -p  666:9000 sonarqube image and continer
+
