@@ -1,1 +1,47 @@
+terraform is an open source ,IAC TOOL , developed created by Hashicorp ans writen in Go programming langgage
+iac  is a process of managing infrastucture in a file or files rather than doing from UI
+HERE resources are nothing but VM,Elastic ip SG ,networking interface
+terraform code is writen in the HCL hashicorp with the files end with Extension .tf
+it spports with aws,azure ,gcp others we can write any scrip with terraform
+terraform provides in google 
+terraform /cloud formation 
+terraform developed in hcl and workes for all cloud provides and fully compatible with JSON 
+cloud formation is developed by aws it supports only to aws utlizes JSONor YAML it had a limt 51000 bytes for the template 
+
+#to instal install one ec2 instance 
+install  wget unzip vim pacakage 
+#downloded terraorm  
+#go to google serch terraform downlod copy link adress 
+#wget link address 64bite dont use arm or install terraform for linux use commands 
+#before that go to opt directory 
+cd /opt  
+run  downlode commands
+unzip terraform file  -d /usr/local/bin/    ====to extarct 
+terraform -v  ====to check the vertion 
+#create IAM user   go to iam console 
+user ==terrafform = programatic acess ==next create user 
+will get access key and screate key  or we will provide arole to ec2 instance 
+
+#create one folder in desktop  use visualstudio  code expler ---open folder ==== desktop ==== terraform folder ==
+create a file clik + first terraform script.tf
+k sensitive keep in lower case 
+provider "aws"{
+    region ="ap-south-1"
+    access_key = "hdfejjbbcjwkj"
+    secreate_key = "hjwtdw6dhhagi67awhd"
+}
+
+resource "aws_instance" "awsec2instance or anyname"{
+  ami = "ami-3464uughtht6"
+  instance_type = "t2.micro"
+  security_groups = ["launch-wizard-2', sg3 "]
+  key_name        = "devops"
+  tags = {
+    Name = "ec2instance by terraform"
+
+  }
+} 
+
+only Name capse 
+security_groups = ["launch-wizard-2', sg3 "] ==== we can add many by ading , and within [] 
 
