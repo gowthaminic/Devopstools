@@ -6,12 +6,27 @@ hyperviser ===vmware====vitulization.
 heavy weight ===hardware (cpu ,memory,hard disk utilization)
 not eazy to move
 contanerization ====
+
 docker install -->>> dokerdaemon --->>> containers
 container is nothint but operating system.-
 container is nothing but server.
 leight weight --->>>no need to take hardware utilization 
 easy to move.
 less utilization of hardware resources..
+only package application and its dependency  
+docker image = set of files that as the application and it dependency files 
+docker container = run time instance of a docker image is called docker container 
+only unix and linux can create isolated  box  no need to ship complete os only app & dependecy packages   can ship 
+unix kernel   [wsl] + docker desktop for windows and mac 
+docker 
+podman = red hat product 
+crio
+container D = added wraper CML
+docker is cliner server module 
+clinet - server  directtly we canot interact to server users talk 
+docker server /docker demon  
+which run time used = docker ,podman 
+
 
 Docker : developers develope the code and that code can be shipped them into container..application -->>> end user.
 one ec2 instance ---->> docker install -->>> containers --->>> n no.of conatinaers it dependent on the system hardware..n no .of apps -->> deploy
@@ -30,7 +45,12 @@ docker installation steps:
 2. install docker 
 yum install -y docker
 service docker start
-ifconfig -a
+ifconfig -a  to see network
+docker --version 
+docker info
+Ensure docker is started and enabled as a service
+sudo systemctl start docker
+sudo systemctl enable docker
 docker 0 --->>> bridge network. assign ip adress to continer
 c1 , c2 , c3 .....IP allocate. ( internal) --->> throgh loop back address
 ifconfig -a  ====   to see network mormally etho ,lopback ,docker0 =bridge network ==assign ip adress to all continers
@@ -53,11 +73,14 @@ docker rm continer name
 docker rm -f  continer name 
 docker rmi -f image name
 docker run -itd --name x1 -p  666:9000 sonarqube image and continer
-
+Instead of exit, just detach the container
+PRESS Ctrl-P and Ctrl-Q one after another to come out of continer
 docker volumes 
 docker volume ls =======to see volumes 
 docker volume create gowthami 
 docker run -itd --name t2 -v gowthami:/myapp(mountpoint) alpine (image)
+#Check the listening ports of your docker host
+netstat -plnt 
 
 docker networks 
 docker network ls 
@@ -94,6 +117,102 @@ create continer    docker run -itd s3 -p 60:80 image id
 
 we can call it from jenkins 
 copy command war file from maven 
+
+
+
+ # Docker Swarm
+  
+  # Initialize swarm
+docker swarm init
+
+#  Node list 
+docker node ls 
+
+
+vim docker-compose.yml
+
+version: "3"
+services:
+  web:
+    # replace username/repo:tag with your name and image details
+    image: username/repo:tag
+    deploy:
+      replicas: 5
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "4000:80"
+    networks:
+      - webnet
+networks:
+  webnet:
+
+
+# Deploy a swarm stack
+docker stack deploy -c docker-compose.yml mystack
+
+# List swarm services
+docker service ls
+
+# Describe a swarm service
+docker service ps mystack_web
+
+docker container ls -q
+
+# Remove a swarm stack
+docker stack rm mystack
+
+# Exit from swarm cluster
+docker swarm leave --force
+
+vim docker-compose.yml
+
+version: "3"
+services:
+  web:
+    image: selva95/pyapp:latest
+    deploy:
+      replicas: 5
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "80:80"
+    networks:
+      - webnet
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    networks:
+      - webnet
+  redis:
+    image: redis
+    ports:z
+      - "6379:6379"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    command: redis-server --appendonly yes
+    networks:
+      - webnet
+networks:
+  webnet:
+
+docker stack deploy -c docker-compose.yml mystack
+
+docker stack ps mystack
+docker service rm webservice
+
+
 
 
 
