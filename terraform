@@ -21,6 +21,23 @@ terraform -v  ====to check the vertion
 #create IAM user   go to iam console 
 user ==terrafform = programatic acess ==next create user 
 will get access key and screate key  or we will provide arole to ec2 instance 
+#terraform can be exicted by normal user ec2user not only root
+#create a dirctory  ===== mkdir terraform 1st 
+# go inside dirctory === cd terraform 1st
+# pwd
+vi 01_terraform script .tf == to create file 
+terraform init ====wihout this command we canot sxicute other commands from this .terraform will create 
+terraform FMT ======= it will rewrite and correct intentation 0r format 
+terraform validate ==== syntax errors 
+terraform plan ======= dry run  what things 
+403 http no enogh permisstions  forbiden ec2 full access 
+terraform apply -auto-approve ===   to create 
+terraform apply  ==== to modyfy  or changing instance type or other things
+terraform destroy ====   to remove 
+
+
+
+
 
 #create one folder in desktop  use visualstudio  code expler ---open folder ==== desktop ==== terraform folder ==
 create a file clik + first terraform script.tf
@@ -42,6 +59,8 @@ resource "aws_instance" "awsec2instance or anyname"{
   }
 } 
 
-only Name capse 
-security_groups = ["launch-wizard-2', sg3 "] ==== we can add many by ading , and within [] 
+*only Name capse 
+*security_groups = ["launch-wizard-2', sg3 "] ==== we can add many by ading , and within [] 
+
+
 
