@@ -58,9 +58,20 @@ Name = "ec2instance by terraform - ${count.index}" ===it give count from 0
 comments
 it supports 3 differnt syntaxes for comments
 single line   ===   #  or  //
-multiline ====  /*   or  */
+multiline ====  /*   or  */ it will work when you u create id variables
+export aws_access_key _id=
+export aws_secreate_key_id=
+excute in linux server were we excuted terraform file
+this works only works untill exit 
+need to add .bash_profile  --user specific
+/etc/profile in etc dire to use permanetly
 
-
+static credentials 
+1]keeping variable in file 
+2]create env variables 
+3]aws role 
+ to run user data  create sh. file and user data add file name var.tf provider.tf
+terraform init 
 
 
 
@@ -79,6 +90,7 @@ resource "aws_instance" "awsec2instance or anyname"{
   instance_type = "t2.micro"
   security_groups = ["launch-wizard-2', sg3 "]
   key_name        = "devops"
+  user_data = "${file("filename)"}"
   tags = {
     Name = "ec2instance by terraform"
 
