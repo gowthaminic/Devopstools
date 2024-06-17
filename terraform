@@ -71,7 +71,61 @@ static credentials
 2]create env variables 
 3]aws role 
  to run user data  create sh. file and user data add file name var.tf provider.tf
-terraform init 
+terraform init
+
+OUTPUT
+output.tf
+output "awsec2instancepublicip"}
+  description = "the public ip of ec2 instance"
+  value = "${aws_instance.awsec2instance.public_ip}"
+{
+output "awsec2instanceprivateip"}
+  description = "the private ip of ec2 instance"
+  value = "${aws_instance.awsec2instance.private_ip}"
+{
+output "awsec2instanceID"}
+  description = "the ec2 instance ID "
+  value = "${aws_instance.awsec2instance.id}"
+{
+Security group
+
+resource "aws_security_group" "securitygroupsbymss"{
+    name = "securityGroupsmytf"
+    description = "this sg created by automatically through tf"
+    vpc_id = "vpc-hjdfsyrnf67563"
+    ingress{
+        description = enableing the inbound rules"
+        from_port = 8080
+        to_port  = 8080
+        protocal = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
+}
+
+egress{
+        description = enableing the outbound rules"
+        from_port = 8080
+        to_port  = 9980
+        protocal = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
+    tags = {
+        Name ="SGby tf" 
+    }
+
+IAM
+
+resource "aws_iam_user" "iam user"{
+     name = "gowthami"
+}
+ resource "aws_iam_user" "iam user"{
+    # name = "gowthami"
+count = length(var.usernames)
+name  = var.username[count.index]
+}  
+
+S3
+
 
 
 
@@ -115,3 +169,7 @@ variable "Numberofinstance"{
  description = this variable having the instance count"
  default = "4"
 }
+
+variable "usernames"{
+type = list(string)
+default = [ a ,b ,c, s,] 
