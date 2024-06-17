@@ -173,3 +173,11 @@ variable "Numberofinstance"{
 variable "usernames"{
 type = list(string)
 default = [ a ,b ,c, s,] 
+
+task in terraform 
+modules ==   set of resorce comes under same path 
+ ex : aws ,sg,s3, ec2 , 
+
+
+
+
