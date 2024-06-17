@@ -1,3 +1,34 @@
 to reombe bill
 support  ==support centre ==create case   ====account and billing ===coslidated  billing ==general quetion === hi team am exporing aws services i have used unknowingly due to that charges occured please wave of my bill and make it 0  check web  
 submit  if thry reply go to ticket and reply 
+
+
+S3
+storage class 
+ ebs efs s3 
+s3 ==== obect level storage 
+different tyepes of storage level
+1 ] standerd 
+2] intelegent tiering 
+3] standerd ia
+4] one zone IA ia = in frequent access 
+5] s3 glacier instant rerival 
+6] glacier flexible 
+
+in organization standard to SQL[links of objects  data will move
+
+#!bin/bash
+echo "cert renewal"
+ssh-keygen add-y
+echo "key added successfully"
+file should be saved as .sh
+sh filename  command  or cron job
+
+
+
+
+
+
+
+
+
