@@ -24,6 +24,32 @@ echo "key added successfully"
 file should be saved as .sh
 sh filename  command  or cron job
 
+harness 
+it is a tool which used by many companies to run ci cd pipelines and maintain iac management  and security integration
+Certainly! **Harness** is a modern software delivery platform that empowers engineers and DevOps teams to build, test, deploy, and
+verify software on-demand¹. Here are some key aspects of Harness:
+
+1. **CI/CD Pipelines**: Harness provides innovative CI/CD capabilities, allowing you to fully automate pipelines for multi-cloud,
+multi-region, and multi-service software deployments. You can build 4x faster with any source code, in any language, and on any operating system¹.
+
+2. Feature Flags: With embedded guardrails and quality checks, Harness enables confident feature releases. Feature flags
+allow you to release new features gradually and monitor their impact1
+3. Infrastructure as Code (IaC) Management: Securely scale your Terraform and OpenTofu infrastructure changes
+using reusable pipeline templates, cost controls, and preemptive policy enforcement1
+4.Security Integration: Integrate security throughout the delivery pipeline without slowing down development velocity.
+Shift-left security testing and orchestrate security scans with 40+ scanner integrations and OPA policies
+
+
+
+eks
+
+
+
+
+
+
+
+
 
 
 
