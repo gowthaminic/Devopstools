@@ -34,6 +34,31 @@ terraform plan ======= dry run  what things
 terraform apply -auto-approve ===   to create 
 terraform apply  ==== to modyfy  or changing instance type or other things
 terraform destroy ====   to remove 
+once we run terraform file it will create terraform .tfstate terraform.tfstate.backup fle so it will n ot allow to create once agine
+terraform.tf statefile we are going to keep in centralized cloud  terraform cloud
+tfE=terraform entierprice ,github, S3, bitbuket
+normally we create sepate folder and file  and keep  for provider provider.tf
+and one more file for resoruce === main.tf file 
+what and all we runned everthing info will be in backup stae file 
+
+#VARIABLES
+the project has more variables it is difficult to maintain all in terrafor scrip we will keep in 1 file 
+Name : vars.tf
+in place of valuve add variables
+count = "${var.numberofinstance}"
+instance_type = "${var.instance type}"
+ami  = "${var.ami}"
+
+#default values it will take it is posible to pass the valuves dynamicaly
+terraform apply -auto approve -var numberofinstace"2"
+
+# rename instance name
+Name = "ec2instance by terraform - ${count.index}" ===it give count from 0 
+
+comments
+it supports 3 differnt syntaxes for comments
+single line   ===   #  or  //
+multiline ====  /*   or  */
 
 
 
@@ -49,6 +74,7 @@ provider "aws"{
 }
 
 resource "aws_instance" "awsec2instance or anyname"{
+  count = "3' to keep how many instance we need like 
   ami = "ami-3464uughtht6"
   instance_type = "t2.micro"
   security_groups = ["launch-wizard-2', sg3 "]
@@ -58,9 +84,22 @@ resource "aws_instance" "awsec2instance or anyname"{
 
   }
 } 
-
 *only Name capse 
 *security_groups = ["launch-wizard-2', sg3 "] ==== we can add many by ading , and within [] 
 
+Variable
+var.tf
+variable "ami"{
+ description = this variable having the ami valu"
+ default = "ami-73ghdfsbnddnnm"
+}
 
+variable "instance type"{
+ description = this variable having the instance type"
+ default = "t2.micro"
+}
 
+variable "Numberofinstance"{
+ description = this variable having the instance count"
+ default = "4"
+}
