@@ -42,6 +42,49 @@ Shift-left security testing and orchestrate security scans with 40+ scanner inte
 
 
 eks
+control plane      
+apt etcd sheduler controller 
+
+worrker node 
+continer network interface ,continer registory dns 
+kubedum
+
+all this is error prone 
+managed control plane 
+not worked  plane
+
+ec2 or forgats  robust and highyly stable 
+
+pod will have cluster id  
+service  nodeput cluster ip lb  to connect out 
+best ingress  resource = route inside traffit from yaml file 
+
+deploy from kubectl this in private subnet 
+ingress controler (alb controler ) nginex ingress controler it creted application load balancer 
+
+kubctl installed
+eksctl ======used 
+aws cli
+open id  ====attach any id providers add users
+install kubeconfig 
+iam oidc provider 
+iam policy iam 
+iam role
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
 
 
 
