@@ -151,6 +151,18 @@ lifecycle_rule
      Name = "s3 buckercreated by tf"
  }
 
+elastic Ip 
+
+resource"aws_instance"
+
+resource "aws_eip" "masseip"{
+}
+resource "aws_eip_association" "massip_assoc"{
+ instance _id = aws_instance.awseip._id
+ allocation_id = aws_eip.masseip._id
+}
+    
+   
 
 
 
