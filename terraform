@@ -124,7 +124,34 @@ count = length(var.usernames)
 name  = var.username[count.index]
 }  
 
-S3
+S3  buket
+
+resource "aws_s3_bucket" "s3bymss"{
+     bucket = "s3bucket"
+     acl ="private"
+     versioning {
+          enabled = true
+     }
+}
+
+lifecycle_rule
+  enabled = true
+
+  transistion {
+     days = 30
+     storage_class = "STANDARD_IA"
+  }
+
+  transistion {
+     days = 60
+     storage_class = "GLACIER"
+  }
+   
+ tags = {
+     Name = "s3 buckercreated by tf"
+ }
+
+
 
 
 
