@@ -1,1 +1,85 @@
+interpreted ,object-oriented ,high-level   it supports prociceducre data programing ang object oriented 1989
+guido van rossum  founder of python  he was fan of movie flaty phython cicus 
+3 vertions  python 1.0 0r 1.x ,2.x,3.x  
+CMD = python --version   or python3 --vertion
+if we want to build AI project are web application  desktop application
+writ ,test  run,debug your code 
+IDE =  integrated development environment 
+famous is python charm  which is from jet brains 
+python download 3.12.0 downlode from goole and open cmd and type python --version and it type python it will open interpreter
+2+3  and enter
+idle python = python interprete
+python idle 
+what is code == we needto tell something to do computer we cannot talkto computer with english it will not understand  so we use python or other langwages to it converts to binary funtion and we get out put
+
+binary 000 and  oness use computer language
+
+addition =2 + 3    enter  = 5  python will give you resoult 
+subtaraction  = 9-8  = 1  
+mutiplication 4*6 = 24
+divistion  8/4   2.0   lill differnece 
+
+we have integers and 
+float = floating point representation 
+if we want only integer 
+5  //  2 = 2          integer division or floor division 
+
+ B           O             D         M        A      S 
+() [] {}   X2 root of X   ./. or /   x         +     _
+Brakets    orders         divide    multiply  add   subtact
+
+8 + 2 * 3   = 14   first mulitply 6 + 8 = 14
+(8+2) *3 = 30 inside backet 1st  10 *3 = 30 
+
+exponets 2 power of 3
+2* 2*2  = 8
+2 ** 3 = 8
+**  power 
+>>> 2*2*2
+8
+>>> 2 ** 3
+8
+>>>
+
+modulers %  to find the reminders
+>>> 10 // 3
+3
+>>> 10 % 3
+1
+>>>
+
+integers , flot ,string (combination of characters,name python is string)
+funtions
+1. print (inbuild funtion  =set of task will be doing  need to call 
+
+
+'gowthami'  use ' or " for string
+add some funtions to string 
+>>> "gowthami"
+'gowthami'
+>>> 'dj'
+'dj'
+>>>
+funtion and string
+>>> print ('gowthami')
+gowthami
+>>> print ('gowthami's laptop')
+  File "<stdin>", line 1
+    print ('gowthami's laptop')
+           ^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> print ("gowthami's laptop")
+gowthami's laptop
+>>>
+
+
+
+
+
+
+
+
+
+
+
 
