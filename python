@@ -54,7 +54,7 @@ funtions
 
 
 'gowthami'  use ' or " for string
-add some funtions to string 
+======add some funtions to string 
 >>> "gowthami"
 'gowthami'
 >>> 'dj'
@@ -71,11 +71,52 @@ SyntaxError: invalid syntax. Perhaps you forgot a comma?
 >>> print ("gowthami's laptop")
 gowthami's laptop
 >>>
+==== if we have single cote like this inside string ("gowthami's laptop")
+use dobble cotes
+print ('gowthami "tanu"')  tanu in dobble cotes
+>>> print ('gowthami "tanu"')
+gowthami "tanu"
+=====if we have both " and ' in string=================
+we should tell python to ignore enter \ back slash
+>>> print ('gowthami's "laptop"')
+  File "<stdin>", line 1
+    print ('gowthami's "laptop"')
+           ^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> print ('gowthami\'s "laptop"')
+gowthami's "laptop"
+>>>
+
+==========to add string================>>> 'gowthami' + gowthami
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'gowthami' is not defined
+>>> 'gowthami' + 'gowthami'
+'gowthamigowthami'
+>>> 10 * ' gowthami'
+' gowthami gowthami gowthami gowthami gowthami gowthami gowthami gowthami gowthami gowthami'
+>>>
+
+==============/n new line in python================
+>>> print (c:\docs\ngowthami')
+  File "<stdin>", line 1
+    print (c:\docs\ngowthami')
+            ^
+SyntaxError: invalid syntax
+>>> print ('c:\docs\ngowthami')
+<stdin>:1: SyntaxWarning: invalid escape sequence '\d'
+c:\docs
+gowthami
 
 
+===========row string (r) ========
+>>> print (r'c:\docs\ngowthami')
+c:\docs\ngowthami
+>>>
 
-
-
+========variables================
+continer were u put ur values
+allgebra x =2
 
 
 
