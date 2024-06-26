@@ -6,7 +6,7 @@ if we want to build AI project are web application  desktop application
 writ ,test  run,debug your code 
 IDE =  integrated development environment 
 famous is python charm  which is from jet brains 
-python download 3.12.0 downlode from goole and open cmd and type python --version and it type python it will open interpreter
+python download 3.12.0 downlode from goole and open cmd and type python --version and  type python it will open interpreter in CMD
 2+3  and enter
 idle python = python interprete
 python idle 
@@ -49,8 +49,9 @@ modulers %  to find the reminders
 >>>
 
 integers , flot ,string (combination of characters,name python is string)
-funtions
+====funtions====
 1. print (inbuild funtion  =set of task will be doing  need to call 
+print is inbuilt funtion 
 
 
 'gowthami'  use ' or " for string
@@ -86,7 +87,7 @@ SyntaxError: invalid syntax. Perhaps you forgot a comma?
 >>> print ('gowthami\'s "laptop"')
 gowthami's "laptop"
 >>>
-
+ print ('gowthami\'s "laptop"')    use \  to ignore ss 
 ==========to add string================>>> 'gowthami' + gowthami
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -98,25 +99,215 @@ NameError: name 'gowthami' is not defined
 >>>
 
 ==============/n new line in python================
->>> print (c:\docs\ngowthami')
-  File "<stdin>", line 1
-    print (c:\docs\ngowthami')
-            ^
-SyntaxError: invalid syntax
+
 >>> print ('c:\docs\ngowthami')
 <stdin>:1: SyntaxWarning: invalid escape sequence '\d'
 c:\docs
 gowthami
 
-
-===========row string (r) ========
+===========row string (r) ========if it should not come in 2nd line use r 
 >>> print (r'c:\docs\ngowthami')
 c:\docs\ngowthami
 >>>
 
 ========variables================
 continer were u put ur values
-allgebra x =2
+allgebra 
+
+name = variable 
+youtube = string
+7 6 5 4 3 2 1 -
+Y O U T U B E
+0 1 2 3 4 5 6
+
+=============== x and y we defined veriables we have some inbuilt variable as well 
+print ,len  etc..
+========variable integers addition
+>>> x = 2   
+>>> x + 5
+7
+>>> y = 5
+>>> x + y
+7
+>>> x = 9
+>>> change x valu  == we can change x values       
+>>> x + y
+14
+>>> x
+9
+>>> abc
+NameError: name 'abc' is not defined
+>>> x + 9
+18
+>>> 19 + y
+24  
+>>> _ + y   to use previous out put use _  (underscore) 24 + 5 = 29 were y=5
+29
+==============variable strings =========
+>>> name = 'youtube'
+>>> name
+'youtube'
+>>> name + 'rocks' ===== addition of variables and string 
+'youtuberocks'
+>>> name + ' rocks'  ======  space is counted in in python
+'youtube rocks'
+>>> name  'rocks' =====  error we should give + 
+  File "<stdin>", line 1
+    name  'rocks'
+          ^^^^^^^
+
+7 6 5 4 3 2 1 -
+Y O U T U B E
+0 1 2 3 4 5 6
+
+SyntaxError: invalid syntax
+>>> name [0]   ======== to see out put only one letter and needed letters
+'y'
+>>> name [6]
+'e'
+>>> name[9] ======  over  number gives error==
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: string index out of range
+>>> name [-1] ===== revers order defined in -1 valuves
+'e'
+>>> name =[-2] == varibale refined to -2 now youtube gone
+>>> name [-2] === youtube chnaged to -2 so its  not showing value 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+>>> name
+[-2]
+>>> name = 'youtube'
+>>> name [-2]
+'b'
+>>> name [-7]
+'y'
+>>> name [0:2]====== if you want to see yo used [0:2] one gareater value we should give
+'yo'
+>>> name [1:4]
+'out'
+>>> name [1:] from 1 to comple
+'outube'
+>>> name [:4] from 0 st to till 4
+'yout'
+>>> name [3:10 from 0 to end no error with high value 
+'tube'
+>>> name [0:3] = 'my' ============= we canot modify variable 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+>>> 'my' + name [3:]======we can add variavle 
+'mytube'
+====================len funtion =======it gives lenth of the name or string  space is also counted in python
+>>> myname = 'gowthami'
+>>> len(myname)
+8
+===============list ==========
+diifer values ,numbers ,strings .to group them  we use list
+aares == in java other langavages
+nums is a variable
+nums == [25,12,36,14 ]
+nums [2:]
+ push stack
+python docs
+
+with list we can perform in built funtions = max, sum,min,
+
+>>>
+>>> nums = [12, 36, 34, 36, 56]
+>>> nums [0]
+12
+>>> nums (4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'list' object is not callable
+>>> nums [4]
+56
+>>> nums[2:]
+[34, 36, 56]
+>>> nums [-1]
+56
+>>> nums[-5]
+12
+>>> names = ['navin','kir', 'jon']
+>>> values = [9.5, 'navin' ,36]
+>>> mil = [nums,names]
+>>> mil
+[[12, 36, 34, 36, 56], ['navin', 'kir', 'jon']]
+>>> nums.append(45) ====append to add directly in last
+>>> nums
+[12, 36, 34, 36, 56, 45]
+>>> nums.insert(2,770) ======inset value in middle 2 place 770
+>>> nums
+[12, 36, 770, 34, 36, 56, 45]
+>>> nums.remove(770)==========to remove
+>>> nums
+[12, 36, 34, 36, 56, 45]============to come out that num
+>>> nums.pop(1)
+36
+>>> nums
+[12, 34, 36, 56, 45] ======pop()=====last added num will come out
+>>> nums.pop()
+45
+>>> del nums[2:] ====delete numbers from 2n value 
+>>> nums
+[12, 34]
+>>> nums.extend([29,12,14,36)]
+  File "<stdin>", line 1
+    nums.extend([29,12,14,36)]
+                            ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '['
+>>> nums.extend([29,12,14,36]) ====to add numbers
+>>> nums
+[12, 34, 29, 12, 14, 36]
+>>> min(nums) ===min number
+12
+>>> max(max)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'builtin_function_or_method' object is not iterable
+>>> max(nums) ====max num
+36
+>>> sum(nums)  ==== total count 
+137
+>>> nums.sort()=== sort in order wise 
+>>> nums
+[12, 12, 14, 29, 34, 36]
+>>>
+=======tuple & set =========
+list we can change value imutable &same as list  tuple inmutable  we can not change the value it starts with == tup
+[] == normally called list 
+tup () ====tuple  round braket 
+tup = (21,36,14,25) once we specify we can not change it 
+only we hanve count and index
+count = will count number of occurance in number  in tup we have 10 value we have 5 which repetd two time if you say 5 it will give 2
+set a values and dont want to change ittration is faster than list
+
+======== set===========
+collection of uniq elements 
+S = {} is for set 
+set will not fallow the sequence in which added elements
+if we enter s we will get the value but not in sequnce
+
+it will not sort if we repeat  value once we get that value no assending or desending order its a random values we canot be asure in sequence in set the reson is set uses a concept called hash #  useing this we improve and fech the elements fast
+ index is not supported 
+can we change the value of set
+in set we can change, remove, update 
+>>> s = { 22,25,14,21,5}
+>>> s
+{5, 21, 22, 25, 14}
+>>> s = {25, 14,21,21,34,43}
+>>> s
+{34, 21, 25, 43, 14}
+>>>
+in cmd if ins not able to find path it does not work 
+set path="path "
+to open help promt ==help ()=== topics ==list = quit
+help('list')
+
+
+
 
 
 
