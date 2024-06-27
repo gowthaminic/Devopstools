@@ -367,6 +367,266 @@ we can change a value but we can show intention this is the PI dont change the v
 we can type of variaple type ()
 which we are using variable we have inbuilt type can we create 
 our own type init ,type ,data types 
+>>> type(PI)
+<class 'float'>
+>>> type(k)
+<class 'int'>
+>>>
+===========Data types========
+none  ====== we have variable and that variable is not assined with any value or null
+================================================================================
+numeric======= we have 4 types int,float,complex,bool=======
+ in complex we have a+bi here we use a+bj   were a=6 b=9
+num= 6+9j     were j = root of -1  it is imaginery number 
+can we connvert from different type float  to int  and int to float
+normal number to complex
+bool =it implements true and false   in python we use true as 1 and false as 0
+>>> num = 2.5
+>>> type(num)
+<class 'float'>====float=====
+>>> num = 5
+>>> type(num)
+<class 'int'>========== int======
+>>> num = a+bj
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'bj' is not defined. Did you mean: 'b'?
+>>> num = 6+9j
+>>> type(num)
+<class 'complex'>=======complex========
+>>> a =5.6
+>>> b = int(a)
+>>> type(b)
+<class 'int'> float to int========
+>>> b
+5
+
+>>> k = float(b)
+>>> k
+5.0     ====== init to float=======
+>>> k =6
+>>> c = complex(b,k) ==========int to complex=====
+>>> c
+(5+6j)
+>>> b<k  ===========bool========
+True
+>>> bool =b< k
+>>> type (bool)
+<class 'bool'>
+>>> bool
+True
+>>> b>k
+False
+>>> ini(true) use caspe fore true and false 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'ini' is not defined. Did you mean: 'int'?
+>>> int(true)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'true' is not defined. Did you mean: 'True'?
+>>> int(True)  we see in python true is 1 and false is 0 
+1
+>>> int(False)
+0
+>>>
+======================================================================
+
+(list   all comes under sequence 
+tuple
+set
+string  in python we dont have character we have call it as string 
+range) range(10)  we can covert range in to list
+range(10)
+range(0, 10)
+list(range(10))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+list(range(2,10,2))
+[2, 4, 6, 8]
+
+===============================
+dictionary or mapping 
+when we have huge amount of data or fetch the data in efficent way or fast way we assingn a key 
+key should be unique
+d ={'naveen','smasung','rahul':'iphone','kiran':'oneplus'}
+>>> d = {'navin':'samsung','rahul':'iphone','kiran':'oneplus'}
+>>> d
+{'navin': 'samsung', 'rahul': 'iphone', 'kiran': 'oneplus'}
+>>> d.keys()  to see keys=========================
+dict_keys(['navin', 'rahul', 'kiran'])
+>>> d.value()   =====values spelling wrong==========
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'dict' object has no attribute 'value'. Did you mean: 'values'?
+>>> d.values()  ==========to see values======
+dict_values(['samsung', 'iphone', 'oneplus'])
+>>> d[navin] ==========missed to add cotes '"==========
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'navin' is not defined
+>>> d['navin']  to se single value===========
+'samsung'
+>>> d.get('kiran')  to get a values===============
+'oneplus'
+>>>
+==========operators==========================
+arithmetic operators
+assignment operators
+relational operators
+logical operators
+unary operators
+==================arithmetic operators======================
+addition subtraction divition multiplication 
+>>> x=2
+>>> y =3
+>>> x+y
+5
+>>> x*y
+6
+>>> x/y
+0.6666666666666666
+>>> x-y
+-1
+>>> x%y
+2
+
+==============assignment operators====================
+= is assignment 
+x= 2>>> x=x+2
+>>> x
+4
+>>> x+=2
+>>> x
+6
+>>> x*=3
+>>> x
+18
+>>> x-=3
+>>> x
+15
+>>> x/=3
+>>> x
+5.0
+>>> a,c = 5,6
+>>> a
+5
+>>> c
+6
+=========Unary OPerator============   1
+negation
+n = 7
+>>> n
+7
+>>> -n
+-7
+>>> n = -n
+>>> n
+-7
+========relational operators================
+>>> a =5
+>>> b = 8
+>>> a < b greater======
+True
+>>> a>b =======lower======
+False
+>>> a == b  egual ============
+False
+>>> a =8
+>>> a == b
+True
+>>> a<=b  gretaer and equal========== 
+True
+>>> a>=b =========lower and equal=========
+True
+>>> a!=b ========not greaterand equal to ====
+False
+>>> b = 9
+>>> a!=b =======not greater and equal to ======
+True
+==================logicaloperations================
+combine based on and, or, not ,
+>>> a =5
+>>> b = 8
+>>> a < b
+True
+>>> a>b
+False
+>>> a == b
+False
+>>> a =8
+>>> a == b
+True
+>>> a<=b
+True
+>>> a>=b
+True
+>>> a!=b
+False
+>>> b = 9
+>>> a!=b
+True
+>>> a =5
+>>> b =4
+>>> a<8 and b>5  ===and 
+False
+>>> a<8 and b<5 =========0r
+True
+>>>
+================not========
+x = Tru>>> x = True   
+>>> x
+True
+>>> not x
+False
+>>> x = not x
+>>> x
+False
+>>>
+======================binary format ===differnt number systems=======
+binary 
+decimal
+octal
+xexa decimals mac address  and ipv6 
+
+decimal to binary
+base 10    base 2
+0-9 we canot go 0-1 we can go
+
+ocatal     hexa decimal
+base 8      base 16
+0-7          0-9 a-f
+
+25/2  =12 => reminer 1
+ 2/12  =6 => 0
+ 2/6   =3 => 0
+ 2/3 =  1  =>1
+
+>>> bin(25)
+'0b11001'
+>>> 0b0101 ====0b =binary
+5
+>>> oct(25) ====0o ===oct
+'0o31'
+>>> hex(25) =====0x  ====hexa
+'0x19'
+>>> hex(10)=====0x  ====hexa 
+'0xa'
+>>> 0xf   hex (0xf) ==15 
+15
+>>>
+============================
+swap 2 variables in python
+
+
+
+
+
+
+
+
+
+
+
 
 
 
