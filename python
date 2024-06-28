@@ -616,6 +616,78 @@ base 8      base 16
 >>>
 ============================
 swap 2 variables in python
+>>> a = 5
+>>> b = 6
+>>>
+>>> temp = a  3rd variable
+>>> a = b
+>>> b = temp
+>>> print(a)
+6
+>>> print(b)
+5
+>>> a = a+b     #11  we or wasting the bit so use ^ XOR it will not waste extra bits
+>>> b = a-b     #5
+>>> a = a-b     #6
+>>> print(a)
+5
+>>> print(b)
+6
+>>> a = a+b 
+>>> a = a^b   use ^ 
+>>> b = a^b
+>>> a = a^b
+>>>
+>>>
+>>> a,b =b,a  stack == rotate two values rot_two() swaps the two top-most stack items
+>>> print(a)
+11
+in goole serch rot two in python 
+
+================how do we access previes commands in IDLE=====
+in CMD use UP arrow
+options =configere IDLE =keys =histery previous clik get new keys for selctin clik up arrow okok 
+==============bitwise operators=================
+6 types
+complement(~)====tilde operator 
+and(&)
+or(|)
+xor(^)
+leftshift(<<)
+rightshift(>>)
+>>> ~12
+-13
+>>> 12&13
+12
+>>> 12|13
+13
+>>> 25&30
+24
+>>> 12^13
+1
+>>> 25^30
+7
+>>> 10<<2
+40
+>>> 10>>2
+2
+>>>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
